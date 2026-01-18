@@ -1,6 +1,13 @@
-# Google AI Studio 项目部署到 Vercel
+# SKILL 快速将 Google AI Studio 项目部署到 Vercel
 
-本指南帮助你将 Google AI Studio 项目安全地部署到 Vercel，保护 API 密钥不被泄露。
+本指南使用 SKILL 帮助你将 Google AI Studio 项目安全快速地部署到 Vercel，保护 API 密钥不被泄露。
+```
+1、安装 SKILL：https://github.com/BUPT-HJM/ai-studio-vercel-secure-deploy
+2、执行该 SKILL 进行部署
+```
+
+## Install（For LLM Agents）
+把该项目克隆到当前项目文件夹下的 .claude/skills 文件夹下
 
 ## 快速开始
 
@@ -9,11 +16,40 @@
 从 Google AI Studio 下载你的项目代码：
 - 访问 [aistudio.google.com](https://aistudio.google.com)
 - 打开你的项目
-- 点击右上角的 "Get code" 或类似按钮下载代码
+- 点击右上角的 "Download App" 下载代码
 
-### 2. 安装 OpenCode
+### 2. 选择 AI 工具
 
-OpenCode 是一个命令行 AI 编程助手，可以帮你完成部署流程。
+你可以使用任何 AI 编程工具来协助完成部署流程。如下选项：
+
+- **OpenCode**
+- **Cursor**
+- **Claude Code**
+- **Antigravity**
+- **其他支持 Skill 的 AI 工具**
+
+下面以 OpenCode 为例进行说明。
+
+#### OpenCode 安装指南
+
+OpenCode 是一个命令行 AI 编程助手（其他安装模式参考 [OpenCode 官方文档](https://opencode.ai/docs)
+
+**Windows 用户**
+
+如果你使用 Windows 系统，请先完成以下步骤：
+
+1. **安装 Node.js**：
+   - 访问 [https://nodejs.org/zh-cn](https://nodejs.org/zh-cn)
+   - 下载 LTS 版本的安装程序
+   - 按照安装向导完成安装
+
+2. **安装 OpenCode**：
+   打开命令提示符 (CMD) 或 PowerShell，运行以下命令：
+   ```bash
+   npm install -g opencode-ai
+   ```
+
+**Mac/Linux 用户**
 
 ```bash
 curl -fsSL https://opencode.ai/install | bash
@@ -27,10 +63,14 @@ opencode --version
 
 ### 3. 使用 SKILL 部署
 
-打开 OpenCode，告诉 OpenCode 项目目录，直接输入：
-
+进入项目目录，使用命令行工具打开 OpenCode（或者使用其他 AI 工具输入框）
+```bash
+opencode
 ```
-针对 xxx 目录，帮我安装这个 SKILL（https://github.com/BUPT-HJM/ai-studio-vercel-secure-deploy），并执行部署到 vercel
+直接输入：
+```
+1、安装 SKILL：git@github.com:BUPT-HJM/ai-studio-vercel-secure-deploy.git
+2、执行该 SKILL 进行部署
 ```
 
 3. 跟着 OpenCode 的指引完成部署。它会：
